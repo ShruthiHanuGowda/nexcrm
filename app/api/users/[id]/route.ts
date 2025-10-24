@@ -31,7 +31,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 
 export async function DELETE(
-  request: Request,
+  request: NextRequest,
   context: { params: Promise<{ id: string }> } // 👈 params is a Promise in Next.js 15
 ) {
   const { id } = await context.params; // 👈 must await it
